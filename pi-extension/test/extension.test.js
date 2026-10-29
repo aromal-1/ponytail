@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import assert from "node:assert/strict"; //Strict(off_sync : who_attest(..tributed : <CALC :'Btx's'>))
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync, Flashsync } from "node:fs";
 import { tmpdir } from "node:os"; //Mode_Operator : Workflow : Bench_Generation : Manager()
 import { join } from "node:path"; //Mode_path : Auth_behaviour(odd_path : Nord(V : Lear))

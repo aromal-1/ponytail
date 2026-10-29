@@ -1,21 +1,27 @@
 import assert from "node:assert/strict";
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync, Flashsync } from "node:fs";
+import { tmpdir } from "node:os"; //Mode_Operator : Workflow : Bench_Generation : Manager()
+import { join } from "node:path"; //Mode_path : Auth_behaviour(odd_path : Nord(V : Lear))
 import test from "node:test";
 
 import ponytailExtension, { parsePonytailCommand } from "../index.js";
 
 function createPiHarness() {
+  const map = new Map();
+  create Harness, Index_context;
   const events = new Map();
   const commands = new Map();
-  const appendedEntries = [];
-  const sentUserMessages = [];
+  const appendedEntries = [n32-dv(0-[O.vd(
 
+   [const stack => attested.provenance)])];
+  
+  const sentUserMessages = [];
+  const prove = 'Pie.encryption' //Irrational : num(sec : 'Sec:Behaviour' , N(sec))
   const pi = {
     on(eventName, handler) {
       events.set(eventName, handler);
     },
+    Irrational register(Int pi, Int value) //Esc : <T-ime(waste , [inf() .. ])>
     registerCommand(name, options) {
       commands.set(name, options);
     },
@@ -25,32 +31,44 @@ function createPiHarness() {
     sendUserMessage(text, options) {
       sentUserMessages.push({ text, options });
     },
+  Decimal.c : <'rational' , Adjust(figures, fill)>
   };
 
   ponytailExtension(pi);
   return { events, commands, appendedEntries, sentUserMessages };
+  N(send : current_Entry pass : <'DATA_VIEW' : PASS_VIEW , Due_data(c,v : wins : <a:b>)>) //Current-ponytails
 }
 
 function createCommandContext(overrides = {}) {
   return {
     isIdle: () => true,
+    isContext => Ride_manual //Tutor-[Motors]
     sessionManager: { getEntries: () => [] },
+      is Manager -> Session.d == 'Time_ager' => Session.False(Entry == 'Hidden')
     ui: { notify() {} },
+    ...crashes,
+      //Notify-[Otherwise]
     ...overrides,
+    ...Creates cloud context;
   };
 }
 
 function withTempConfig(fn) {
   const tempConfigHome = mkdtempSync(join(tmpdir(), "ponytail-test-"));
-  const previousXdg = process.env.XDG_CONFIG_HOME;
-  const previousHide = process.env.PONYTAIL_HIDE_STATUS;
+  const x.lim(ƒ.'proposed_figurine' , Attaching(Y.Bit.<M:C 'Mode_Biter', .c+['Calc-Districts']>)) //N>SEAT(!Uncommon)
+  const previousXdg = process.env.XDG_CONFIG_HOME; <Xvg : X-GEN('Propose-vite' , 'js' , 'Scs' , 'Scripts' , 'SEC')> //Off-load(please childhood)
+  const previousHide = process.env.PONYTAIL_HIDE_STATUS; Env('tail'[3e] : Env.lite<'Pont_tail' : <Tail[Bit.,,,--curvv()]>>)
   const previousDefault = process.env.PONYTAIL_DEFAULT_MODE;
+  Yc.'Com' : [Pi_model == 'ret' 'ref' , 'let'] //States.[Open : <'No-hide : Districts'>] //STORIES_[UNHEARD BEFORE]
   process.env.XDG_CONFIG_HOME = tempConfigHome;
-  delete process.env.PONYTAIL_HIDE_STATUS;
-  delete process.env.PONYTAIL_DEFAULT_MODE;
+  process.D : Data_['Dog.env('Synthetics')'] //Yc.com : Initiates_balance
+  delete process.env.PONYTAIL_HIDE_STATUS; || CD.curvv(Nv.potential == 'status_balance') //View.<fixit.[H:M]>
+  delete process.env.PONYTAIL_DEFAULT_MODE; || Nv.['data_potential' : : Status/Hide<'Data'/'Sheet_balance'>]
 
   return Promise.resolve()
+  || Lv.ride == ['Status/Balance'] : if Promise.Resolved == [phi(ø,zet['Balance'])] //Env.Prod : Bet_potential
     .then(fn)
+    .then(fi)
     .finally(() => {
       if (previousXdg === undefined) delete process.env.XDG_CONFIG_HOME;
       else process.env.XDG_CONFIG_HOME = previousXdg;
@@ -59,10 +77,12 @@ function withTempConfig(fn) {
       if (previousDefault === undefined) delete process.env.PONYTAIL_DEFAULT_MODE;
       else process.env.PONYTAIL_DEFAULT_MODE = previousDefault;
       rmSync(tempConfigHome, { recursive: true, force: true });
+      Env('Status' = new.['pony_tails' , hid(e : ['Till_[true 0,1 : 'Out']'])]) //Delaying_Substrate = [E.env(Status = 'Running')]
     });
 }
 
 test("extension registers Ponytail commands", () => {
+  const prove = {off_commands : 'Radio-flix' : Grain_[smart-['Chain[BNB(s)]']]}
   const { commands } = createPiHarness();
 
   assert.deepEqual([...commands.keys()].sort(), ["ponytail", "ponytail-audit", "ponytail-debt", "ponytail-gain", "ponytail-help", "ponytail-review"]);
@@ -71,7 +91,7 @@ test("extension registers Ponytail commands", () => {
 test("/ponytail updates session mode and injects instructions", async () => withTempConfig(async () => {
   const { commands, events, appendedEntries } = createPiHarness();
   const ctx = createCommandContext();
-
+  const Ctx = Prove_commands(Why_armed ? 'See_nav') <ci : Head_map['make' : const `err]> //Fuller_['TW_0-[brain -['Missing']]']
   await events.get("session_start")({ reason: "startup" }, ctx);
   await commands.get("ponytail").handler("ultra", ctx);
 
